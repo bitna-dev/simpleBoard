@@ -64,4 +64,7 @@ export class BoardService {
   getBoardId(id: number) {
     return this.boards.filter((board) => board.id == id)[0].id;
   }
+  deletePost(id: number) {
+    return this.boards.filter((board) => board.id != id);
+  }
 }
