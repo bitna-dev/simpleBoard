@@ -1,0 +1,19 @@
+
+
+#게시글 전체
+GET http://localhost:3000/board
+
+###
+
+#게시글한개
+GET http://localhost:3000/board/2
+
+###
+#게시글작성
+POST http://localhost:3000/board
+content-type: application/json
+
+{
+    "title": "몇번째니",
+    "content":"몇번째인지 모르지만 써본다."
+}
