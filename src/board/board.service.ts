@@ -49,4 +49,19 @@ export class BoardService {
     this.boards.push(newBoard);
     return newBoard;
   }
+
+  updatePost(id: number, data) {
+    const idx = this.getBoardId(id);
+    if (idx > -1) {
+      this.boards[idx] = {
+        ...this.boards[idx],
+        ...data,
+      };
+    }
+    return this.boards[idx];
+  }
+
+  getBoardId(id: number) {
+    return this.boards.filter((board) => board.id == id)[0].id;
+  }
 }
